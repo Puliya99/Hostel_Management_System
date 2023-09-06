@@ -11,7 +11,7 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-public class StudentDTO {
+public class StudentDTO implements SuperDTO{
     private String student_id;
     private String name;
     private String address;

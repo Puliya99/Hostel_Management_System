@@ -9,7 +9,7 @@ import java.sql.Date;
 @Getter
 @Setter
 @ToString
-public class ReservationDTO {
+public class ReservationDTO implements SuperDTO{
     private String res_id;
     private Date date;
     private String status;

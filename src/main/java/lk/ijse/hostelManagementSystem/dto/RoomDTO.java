@@ -10,7 +10,7 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-public class RoomDTO {
+public class RoomDTO implements SuperDTO{
     private String room_type_id;
     private String type;
     private Double key_money;
