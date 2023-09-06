@@ -4,6 +4,7 @@ import lombok.*;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @NoArgsConstructor
@@ -16,7 +17,7 @@ public class StudentDTO implements SuperDTO{
     private String name;
     private String address;
     private String contact_no;
-    private LocalDate dob;
+    private Date dob;
     private String gender;
     @ToString.Exclude
     private final List<ReservationDTO> reservationList = new ArrayList<>();

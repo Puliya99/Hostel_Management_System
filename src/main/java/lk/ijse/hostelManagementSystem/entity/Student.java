@@ -15,7 +15,7 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-public class Student {
+public class Student implements SuperEntity{
     @Id
     private  String student_id;
     private String name;

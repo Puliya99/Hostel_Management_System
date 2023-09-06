@@ -9,7 +9,7 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @ToString
-public class User {
+public class User implements SuperEntity {
     @Id
     private String userName;
     private String password;

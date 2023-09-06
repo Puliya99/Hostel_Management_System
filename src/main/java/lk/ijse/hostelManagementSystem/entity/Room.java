@@ -12,7 +12,7 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-public class Room {
+public class Room implements SuperEntity{
     @Id
     private String room_type_id;
     private String type;

@@ -12,7 +12,7 @@ import java.sql.Date;
 @Getter
 @Setter
 @ToString
-public class Reservation {
+public class Reservation implements SuperEntity {
     @Id
     private String res_id;
     private Date date;
