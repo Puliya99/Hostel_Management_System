@@ -1,7 +1,11 @@
 package lk.ijse.hostelManagementSystem.entity;
 
 import lombok.*;
-import java.time.LocalDate;
+import javax.persistence.CascadeType;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import java.sql.Date;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -9,9 +13,15 @@ import java.time.LocalDate;
 @Setter
 @ToString
 public class Reservation {
+    @Id
     private String res_id;
-    private LocalDate date;
-    private String student_id;
-    private String room_type_id;
+    private Date date;
     private String status;
+    @ToString.Exclude
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Student student;
+    @ToString.Exclude
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Room room;
+
 }
