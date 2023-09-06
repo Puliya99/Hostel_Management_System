@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="unPaid" prefHeight="727.0" prefWidth="1089.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.controller.UnpaidFormController">
+    <children>
+        <TableView fx:id="tblStudents" layoutX="14.0" layoutY="123.0" onMouseClicked="#tblStudentsOnMouseClicked" prefHeight="581.0" prefWidth="1054.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+            <columns>
+                <TableColumn fx:id="colStdId" prefWidth="152.0" text="ID" />
+                <TableColumn fx:id="colStdName" prefWidth="366.0" text="Name" />
+                <TableColumn fx:id="colStdAddress" prefWidth="289.0" text="Address" />
+                <TableColumn fx:id="colMobile" prefWidth="246.0" text="Mobile" />
+            </columns>
+        </TableView>
+        <Label layoutX="104.0" layoutY="14.0" text="Un-Paid Students">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="82.0" text="Students List">
+            <font>
+                <Font size="28.0" />
+            </font>
+        </Label>
+        <Separator layoutX="14.0" layoutY="65.0" prefHeight="0.0" prefWidth="1054.0" />
+        <JFXButton layoutX="14.0" layoutY="23.0" onAction="#btnBackOnAction" prefHeight="35.0" prefWidth="76.0" style="-fx-background-color: #7269f1; -fx-background-radius: 10;" text="Back" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </JFXButton>
+    </children>
+</AnchorPane>
