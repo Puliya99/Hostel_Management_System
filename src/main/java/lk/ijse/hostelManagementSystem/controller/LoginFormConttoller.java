@@ -44,19 +44,19 @@ public class LoginFormConttoller implements Initializable {
 
     public void btnLoginOnAction(ActionEvent actionEvent) throws IOException {
 //        if (checkRegEx()) {
-            try {
-                UserDTO dto = new UserDTO(txtUserName.getText(), txtPassword.getText());
-                UserDTO user = userBo.view(dto.getUserName());
-                if (user.getUserName().equals(txtUserName.getText()) && user.getPassword().equals(txtPassword.getText())) {
+//            try {
+//                UserDTO dto = new UserDTO(txtUserName.getText(), txtPassword.getText());
+//                UserDTO user = userBo.view(dto.getUserName());
+//                if (user.getUserName().equals(txtUserName.getText()) && user.getPassword().equals(txtPassword.getText())) {
                     Stage window = (Stage) login.getScene().getWindow();
                     window.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/dashboard_form.fxml"))));
-                }
-            } catch (RuntimeException | IOException exception) {
-                new Alert(Alert.AlertType.INFORMATION, exception.getMessage()).show();
-            }
-//        } else {
-//            new Alert(Alert.AlertType.INFORMATION, "Invalid Input!").show();
-//        }
+//                }
+//            } catch (RuntimeException | IOException exception) {
+//                new Alert(Alert.AlertType.INFORMATION, exception.getMessage()).show();
+//            }
+////        } else {
+////            new Alert(Alert.AlertType.INFORMATION, "Invalid Input!").show();
+////        }
     }
 
     public void btnSignUpOnAction(ActionEvent actionEvent) throws IOException {
