@@ -63,7 +63,7 @@
                </font></JFXButton>
             </buttons>
         </ButtonBar>
-        <TextField fx:id="txtSearch" layoutX="750.0" layoutY="23.0" onAction="#txtSearchOnAction" onKeyReleased="#txtSearchOnKeyReleased" prefHeight="33.0" prefWidth="282.0" promptText="Search" />
+        <TextField fx:id="txtSearch" layoutX="750.0" layoutY="23.0" onAction="#txtSearchOnAction" prefHeight="33.0" prefWidth="282.0" promptText="Search" />
         <Label layoutX="81.0" layoutY="621.0" text="Address">
             <font>
                 <Font size="20.0" />
