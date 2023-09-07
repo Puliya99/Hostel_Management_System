@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="480.0" prefWidth="352.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.controller.SignUpFormController">
+<AnchorPane fx:id="sign" prefHeight="480.0" prefWidth="352.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelManagementSystem.controller.SignUpFormController">
     <children>
         <ImageView fitHeight="480.0" fitWidth="360.0" layoutX="-6.0" opacity="0.24" pickOnBounds="true">
             <image>

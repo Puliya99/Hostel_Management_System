@@ -1,9 +1,9 @@
 package lk.ijse.hostelManagementSystem.entity;
 
+import javax.persistence.*;
 import lombok.*;
 
-import javax.persistence.Id;
-
+@Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter

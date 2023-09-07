@@ -48,7 +48,7 @@
                 </Label>
                 <RadioButton fx:id="btnShowPassword" layoutX="673.0" layoutY="410.0" mnemonicParsing="false" onMouseClicked="#BtnOnMouseClicked" text="show password" />
                 <Label fx:id="lblPassword" layoutX="922.0" layoutY="407.0" prefHeight="31.0" prefWidth="148.0" />
-                <Label layoutX="158.0" layoutY="432.0" prefHeight="78.0" prefWidth="231.0" styleClass="fontColor" stylesheets="@../style/style.css" text="Fake" textFill="#ffe100">
+                <Label layoutX="158.0" layoutY="432.0" prefHeight="78.0" prefWidth="231.0" stylesheets="@../style/style.css" text="Fake" textFill="#ffe100">
                     <font>
                         <Font name="System Bold Italic" size="48.0" />
                     </font>

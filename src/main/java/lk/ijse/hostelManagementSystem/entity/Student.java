@@ -1,12 +1,8 @@
 package lk.ijse.hostelManagementSystem.entity;
 
+import javax.persistence.*;
 import lombok.*;
-
-import javax.persistence.CascadeType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import java.sql.Date;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +11,7 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
+@Entity
 public class Student implements SuperEntity{
     @Id
     private  String student_id;

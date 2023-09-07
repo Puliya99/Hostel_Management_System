@@ -1,10 +1,7 @@
 package lk.ijse.hostelManagementSystem.entity;
 
+import javax.persistence.*;
 import lombok.*;
-import javax.persistence.CascadeType;
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import java.sql.Date;
 
 @NoArgsConstructor
@@ -12,6 +9,7 @@ import java.sql.Date;
 @Getter
 @Setter
 @ToString
+@Entity
 public class Reservation implements SuperEntity {
     @Id
     private String res_id;
