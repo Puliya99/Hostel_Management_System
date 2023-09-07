@@ -26,25 +26,25 @@
                 <Font size="20.0" />
             </font>
         </Label>
-        <TextField fx:id="txtId" editable="false" layoutX="203.0" layoutY="514.0" onAction="#txtIdOnAction" prefHeight="33.0" prefWidth="282.0" />
+        <TextField fx:id="txtId" editable="false" layoutX="203.0" layoutY="514.0" prefHeight="33.0" prefWidth="282.0" />
         <Label layoutX="79.0" layoutY="579.0" text="Type">
             <font>
                 <Font size="20.0" />
             </font>
         </Label>
-        <TextField fx:id="txtType" layoutX="201.0" layoutY="574.0" onAction="#txtTypeOnAction" prefHeight="33.0" prefWidth="282.0" />
+        <TextField fx:id="txtType" layoutX="201.0" layoutY="574.0" prefHeight="33.0" prefWidth="282.0" />
         <Label layoutX="600.0" layoutY="519.0" text="Key Money">
             <font>
                 <Font size="20.0" />
             </font>
         </Label>
-        <TextField fx:id="txtKeyMoney" layoutX="722.0" layoutY="514.0" onAction="#txtKeyMoneyOnAction" prefHeight="33.0" prefWidth="282.0" />
+        <TextField fx:id="txtKeyMoney" layoutX="722.0" layoutY="514.0" prefHeight="33.0" prefWidth="282.0" />
         <Label layoutX="600.0" layoutY="580.0" text="Qty">
             <font>
                 <Font size="20.0" />
             </font>
         </Label>
-        <TextField fx:id="txtQty" layoutX="722.0" layoutY="575.0" onAction="#txtQtyOnAction" prefHeight="33.0" prefWidth="282.0" />
+        <TextField fx:id="txtQty" layoutX="722.0" layoutY="575.0" prefHeight="33.0" prefWidth="282.0" />
         <Separator layoutX="14.0" layoutY="66.0" prefHeight="0.0" prefWidth="1036.0" />
         <ButtonBar layoutX="644.0" layoutY="640.0" prefHeight="52.0" prefWidth="367.0">
             <buttons>
@@ -63,6 +63,6 @@
                </font></JFXButton>
             </buttons>
         </ButtonBar>
-        <TextField fx:id="txtSearch" layoutX="744.0" layoutY="23.0" onAction="#txtSearchOnAction" onKeyReleased="#txtSearchOnKeyReleased" prefHeight="33.0" prefWidth="282.0" promptText="Search" />
+        <TextField fx:id="txtSearch" layoutX="744.0" layoutY="23.0" prefHeight="33.0" prefWidth="282.0" promptText="Search" />
     </children>
 </AnchorPane>
