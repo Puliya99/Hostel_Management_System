@@ -72,6 +72,7 @@ public class AddReservationFormController implements Initializable {
         } catch (RuntimeException ignored) {
         }
     }
+
     public void cmbRoomIdOnAction(ActionEvent actionEvent) {
         try {
             String selectedItem = cmbRoomId.getSelectionModel().getSelectedItem();
@@ -98,9 +99,6 @@ public class AddReservationFormController implements Initializable {
             new Alert(Alert.AlertType.ERROR, exception.getMessage()).showAndWait();
             stage.setAlwaysOnTop(false);
         }
-    }
-
-    public void cmbStudentIdOnAction(ActionEvent actionEvent) {
     }
 
     private void saveReservation(String status) {

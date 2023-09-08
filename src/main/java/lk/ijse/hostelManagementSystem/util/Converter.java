@@ -1,6 +1,5 @@
 package lk.ijse.hostelManagementSystem.util;
 
-
 import lk.ijse.hostelManagementSystem.dto.ReservationDTO;
 import lk.ijse.hostelManagementSystem.dto.RoomDTO;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
@@ -9,7 +8,6 @@ import lk.ijse.hostelManagementSystem.entity.Reservation;
 import lk.ijse.hostelManagementSystem.entity.Room;
 import lk.ijse.hostelManagementSystem.entity.Student;
 import lk.ijse.hostelManagementSystem.entity.User;
-
 import java.sql.Date;
 
 public class Converter {

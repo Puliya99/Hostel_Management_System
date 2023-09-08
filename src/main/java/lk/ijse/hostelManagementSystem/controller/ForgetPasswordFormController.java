@@ -2,19 +2,11 @@ package lk.ijse.hostelManagementSystem.controller;
 
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 import lk.ijse.hostelManagementSystem.bo.BOFactory;
 import lk.ijse.hostelManagementSystem.bo.custom.UserBo;
-import lk.ijse.hostelManagementSystem.dto.UserDTO;
-
-import java.io.IOException;
 import java.net.URL;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class ForgetPasswordFormController implements Initializable {
@@ -23,7 +15,6 @@ public class ForgetPasswordFormController implements Initializable {
     public TextField txtPassword;
     public TextField txtConfirmPassword;
     private Boolean confirmPasswordVisible;
-
     private UserBo userBo;
 
     @Override

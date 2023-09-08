@@ -1,7 +1,6 @@
 package lk.ijse.hostelManagementSystem.bo;
 
 import lk.ijse.hostelManagementSystem.dto.SuperDTO;
-
 import java.util.List;
 
 public interface SuperBo <T extends SuperDTO> {

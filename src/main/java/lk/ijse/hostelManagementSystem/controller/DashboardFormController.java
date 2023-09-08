@@ -61,5 +61,4 @@ public class DashboardFormController implements Initializable {
         dashBoard.getChildren().clear();
         dashBoard.getChildren().add(FXMLLoader.load(getClass().getResource("/view/user_form.fxml")));
     }
-
 }

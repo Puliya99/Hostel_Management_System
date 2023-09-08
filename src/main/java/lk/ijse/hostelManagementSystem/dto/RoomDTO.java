@@ -1,7 +1,6 @@
 package lk.ijse.hostelManagementSystem.dto;
 
 import lombok.*;
-
 import java.util.ArrayList;
 import java.util.List;
 

@@ -13,7 +13,8 @@ import javafx.stage.Stage;
 import lk.ijse.hostelManagementSystem.bo.BOFactory;
 import lk.ijse.hostelManagementSystem.bo.custom.UserBo;
 import lk.ijse.hostelManagementSystem.dto.UserDTO;
-
+import lk.ijse.hostelManagementSystem.util.regex.RegExFactory;
+import lk.ijse.hostelManagementSystem.util.regex.RegExType;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -26,7 +27,6 @@ public class LoginFormConttoller implements Initializable {
     public RadioButton btnShowPassword;
     public Label lblPassword;
     public AnchorPane login;
-
     private UserBo userBo;
 
     @Override
@@ -43,20 +43,24 @@ public class LoginFormConttoller implements Initializable {
     }
 
     public void btnLoginOnAction(ActionEvent actionEvent) throws IOException {
-//        if (checkRegEx()) {
-//            try {
-//                UserDTO dto = new UserDTO(txtUserName.getText(), txtPassword.getText());
-//                UserDTO user = userBo.view(dto.getUserName());
-//                if (user.getUserName().equals(txtUserName.getText()) && user.getPassword().equals(txtPassword.getText())) {
+        if (checkRegEx()) {
+            try {
+                UserDTO dto = new UserDTO(txtUserName.getText(), txtPassword.getText());
+                UserDTO user = userBo.view(dto.getUserName());
+                if (user.getUserName().equals(txtUserName.getText()) && user.getPassword().equals(txtPassword.getText())) {
                     Stage window = (Stage) login.getScene().getWindow();
                     window.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/dashboard_form.fxml"))));
-//                }
-//            } catch (RuntimeException | IOException exception) {
-//                new Alert(Alert.AlertType.INFORMATION, exception.getMessage()).show();
-//            }
-////        } else {
-////            new Alert(Alert.AlertType.INFORMATION, "Invalid Input!").show();
-////        }
+                }
+            } catch (RuntimeException | IOException exception) {
+                new Alert(Alert.AlertType.INFORMATION, exception.getMessage()).show();
+            }
+        } else {
+            new Alert(Alert.AlertType.INFORMATION, "Invalid Input!").show();
+        }
+    }
+
+    private boolean checkRegEx() throws RuntimeException {
+        return RegExFactory.getInstance().getPattern(RegExType.NAME).matcher(txtUserName.getText()).matches() && RegExFactory.getInstance().getPattern(RegExType.PASSWORD).matcher(txtPassword.getText()).matches();
     }
 
     public void btnSignUpOnAction(ActionEvent actionEvent) throws IOException {

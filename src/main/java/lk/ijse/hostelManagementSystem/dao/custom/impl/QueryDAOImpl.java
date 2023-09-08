@@ -4,7 +4,6 @@ import lk.ijse.hostelManagementSystem.dao.custom.QueryDAO;
 import lk.ijse.hostelManagementSystem.entity.Student;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
-
 import java.util.List;
 
 public class QueryDAOImpl implements QueryDAO {

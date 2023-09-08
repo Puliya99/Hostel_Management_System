@@ -19,6 +19,7 @@ public class UserBoImpl implements UserBo {
     public UserBoImpl() {
         userDao = (UserDao) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.USER);
     }
+
     @Override
     public Boolean save(UserDTO entity) throws RuntimeException{
         Session session = FactoryConfiguration.getFactoryConfiguration().getSession();

@@ -1,11 +1,9 @@
 package lk.ijse.hostelManagementSystem.tm;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-
 import java.sql.Date;
 
 @ToString

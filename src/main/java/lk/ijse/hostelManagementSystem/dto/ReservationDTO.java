@@ -3,7 +3,6 @@ package lk.ijse.hostelManagementSystem.dto;
 import lombok.*;
 import java.sql.Date;
 
-
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter

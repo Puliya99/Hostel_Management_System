@@ -4,7 +4,6 @@ import lk.ijse.hostelManagementSystem.dao.custom.StudentDAO;
 import lk.ijse.hostelManagementSystem.entity.Student;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
-
 import java.util.List;
 
 public class StudentDaoImpl implements StudentDAO {
@@ -55,4 +54,5 @@ public class StudentDaoImpl implements StudentDAO {
         List<Student> list = query.list();
         return list;
     }
+
 }

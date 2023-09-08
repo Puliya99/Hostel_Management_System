@@ -30,7 +30,7 @@
                     </font>
                 </Label>
                 <ComboBox fx:id="cmbRoomId" layoutX="19.0" layoutY="162.0" onAction="#cmbRoomIdOnAction" prefHeight="51.0" prefWidth="339.0" promptText="click to select" style="-fx-background-color: #DFF6FF; -fx-background-radius: 15;" />
-                <ComboBox fx:id="cmbStdId" layoutX="20.0" layoutY="90.0" onAction="#cmbStudentIdOnAction" prefHeight="39.0" prefWidth="339.0" promptText="click to select" style="-fx-background-color: #DFF6FF; -fx-background-radius: 10;" />
+                <ComboBox fx:id="cmbStdId" layoutX="20.0" layoutY="90.0" prefHeight="39.0" prefWidth="339.0" promptText="click to select" style="-fx-background-color: #DFF6FF; -fx-background-radius: 10;" />
                 <Label layoutX="22.0" layoutY="140.0" text="Room Type">
                     <font>
                         <Font size="17.0" />

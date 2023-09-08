@@ -19,7 +19,6 @@ import javafx.stage.Stage;
 import lk.ijse.hostelManagementSystem.bo.BOFactory;
 import lk.ijse.hostelManagementSystem.bo.custom.UserBo;
 import lk.ijse.hostelManagementSystem.dto.UserDTO;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;

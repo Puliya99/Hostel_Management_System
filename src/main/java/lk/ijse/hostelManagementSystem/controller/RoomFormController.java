@@ -10,15 +10,13 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import lk.ijse.hostelManagementSystem.bo.BOFactory;
 import lk.ijse.hostelManagementSystem.bo.custom.RoomBO;
-import lk.ijse.hostelManagementSystem.bo.custom.StudentBo;
 import lk.ijse.hostelManagementSystem.dto.RoomDTO;
 import lk.ijse.hostelManagementSystem.tm.RoomTm;
-import lk.ijse.hostelManagementSystem.tm.StudentTm;
-
+import lk.ijse.hostelManagementSystem.util.regex.RegExFactory;
+import lk.ijse.hostelManagementSystem.util.regex.RegExType;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -72,7 +70,7 @@ public class RoomFormController implements Initializable {
 
     public void btnAddOnAction(ActionEvent actionEvent) {
         try {
-//            if (validateData()) {
+            if (validateData()) {
             RoomDTO roomDto = new RoomDTO();
             roomDto.setRoom_type_id(txtId.getText());
             roomDto.setType(txtType.getText());
@@ -84,13 +82,17 @@ public class RoomFormController implements Initializable {
 
             refreshTable();
             clearAll();
-//            } else {
-//                new Alert(Alert.AlertType.ERROR, "Invalid input!").show();
-//            }
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Invalid input!").show();
+            }
         } catch (RuntimeException exception) {
             new Alert(Alert.AlertType.ERROR, exception.getMessage()).show();
             clearAll();
         }
+    }
+
+    private boolean validateData() {
+        return RegExFactory.getInstance().getPattern(RegExType.DOUBLE).matcher(txtKeyMoney.getText()).matches() && RegExFactory.getInstance().getPattern(RegExType.NAME).matcher(txtType.getText()).matches() && RegExFactory.getInstance().getPattern(RegExType.INTEGER).matcher(txtQty.getText()).matches();
     }
 
     private void refreshTable() {
@@ -115,7 +117,7 @@ public class RoomFormController implements Initializable {
     public void btnUpdateOnAction(ActionEvent actionEvent) {
         try {
             if (tblRooms.getSelectionModel().getSelectedItem() != null) {
-//                if (validateData()) {
+                if (validateData()) {
                     RoomDTO roomDto = new RoomDTO();
                     roomDto.setRoom_type_id(txtId.getText());
                     roomDto.setType(txtType.getText());
@@ -127,9 +129,9 @@ public class RoomFormController implements Initializable {
 
                     refreshTable();
                     clearAll();
-//                } else {
-//                    new Alert(Alert.AlertType.ERROR, "Invalid input!").show();
-//                }
+                } else {
+                    new Alert(Alert.AlertType.ERROR, "Invalid input!").show();
+                }
             } else {
                 throw new RuntimeException("Select Room First");
             }
@@ -140,10 +142,6 @@ public class RoomFormController implements Initializable {
         btnUpdate.setDisable(true);
         btnDelete.setDisable(true);
     }
-
-//    private boolean validateData() {
-//        return RegExFactory.getInstance().getPattern(RegExType.DOUBLE).matcher(txtKeyMoney.getText()).matches() && RegExFactory.getInstance().getPattern(RegExType.NAME).matcher(txtType.getText()).matches() && RegExFactory.getInstance().getPattern(RegExType.INTEGER).matcher(txtQty.getText()).matches();
-//    }
 
     public void btnDeleteOnAction(ActionEvent actionEvent) {
         RoomTm selectedItem = tblRooms.getSelectionModel().getSelectedItem();

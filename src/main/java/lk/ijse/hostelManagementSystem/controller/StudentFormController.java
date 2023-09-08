@@ -7,12 +7,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import lk.ijse.hostelManagementSystem.bo.BOFactory;
 import lk.ijse.hostelManagementSystem.bo.custom.StudentBo;
 import lk.ijse.hostelManagementSystem.dto.StudentDTO;
 import lk.ijse.hostelManagementSystem.tm.StudentTm;
+import lk.ijse.hostelManagementSystem.util.regex.RegExFactory;
+import lk.ijse.hostelManagementSystem.util.regex.RegExType;
 import java.net.URL;
 import java.sql.Date;
 import java.util.List;
@@ -73,6 +74,7 @@ public class StudentFormController implements Initializable {
         studentTm.setAddress(studentDto.getAddress());
         return studentTm;
     }
+
     public void tblStudentOnMouseClicked(MouseEvent mouseEvent) {
         StudentTm selectedItem = tblStudents.getSelectionModel().getSelectedItem();
         try {
@@ -100,7 +102,7 @@ public class StudentFormController implements Initializable {
 
     public void btnAddOnAction(ActionEvent actionEvent) {
         try {
-//            if (validation()) {
+            if (validation()) {
                 StudentDTO studentDto = new StudentDTO();
                 studentDto.setStudent_id(txtId.getText());
                 studentDto.setName(txtName.getText());
@@ -112,12 +114,16 @@ public class StudentFormController implements Initializable {
                 new Alert(Alert.AlertType.INFORMATION, "Student Added").show();
                 clearAll();
                 refreshTable();
-//            } else {
-//                throw new RuntimeException("invalid input data in fields!");
-//            }
+            } else {
+                throw new RuntimeException("invalid input data in fields!");
+            }
         } catch (RuntimeException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
+    }
+
+    private boolean validation() {
+        return RegExFactory.getInstance().getPattern(RegExType.NAME).matcher(txtName.getText()).matches() && RegExFactory.getInstance().getPattern(RegExType.CITY).matcher(txtAddress.getText()).matches() && RegExFactory.getInstance().getPattern(RegExType.MOBILE).matcher(txtContact.getText()).matches() && cmbDob.getValue() != null;
     }
 
     private void clearAll() {
@@ -145,7 +151,7 @@ public class StudentFormController implements Initializable {
     }
     public void btnUpdateOnAction(ActionEvent actionEvent) {
         try {
-//            if (validation()) {
+            if (validation()) {
                 StudentDTO studentDto = new StudentDTO();
 
                 studentDto.setStudent_id(txtId.getText());
@@ -158,9 +164,9 @@ public class StudentFormController implements Initializable {
                 new Alert(Alert.AlertType.INFORMATION, "Student Updated").show();
                 clearAll();
                 refreshTable();
-//            } else {
-//                throw new RuntimeException("invalid input data in fields!");
-//            }
+            } else {
+                throw new RuntimeException("invalid input data in fields!");
+            }
         } catch (RuntimeException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
@@ -190,10 +196,10 @@ public class StudentFormController implements Initializable {
     }
 
     public void txtSearchOnAction(ActionEvent actionEvent) {
-//        if (RegExFactory.getInstance().getPattern(RegExType.STUDENT_ID).matcher(txtSearch.getText()).matches()) {
+        if (RegExFactory.getInstance().getPattern(RegExType.STUDENT_ID).matcher(txtSearch.getText()).matches()) {
             StudentDTO studentDto = new StudentDTO();
             studentDto.setStudent_id(txtSearch.getText());
-//        }
+        }
     }
 
 }
