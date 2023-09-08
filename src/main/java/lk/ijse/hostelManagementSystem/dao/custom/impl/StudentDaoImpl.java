@@ -25,7 +25,6 @@ public class StudentDaoImpl implements StudentDAO {
         Student student = new Student();
         student.setStudent_id(id);
         session.delete(student);
-        System.out.println("Std Dao end");
         return true;
     }
 

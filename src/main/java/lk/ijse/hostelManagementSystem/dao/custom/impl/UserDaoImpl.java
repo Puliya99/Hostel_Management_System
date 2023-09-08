@@ -3,7 +3,6 @@ package lk.ijse.hostelManagementSystem.dao.custom.impl;
 import lk.ijse.hostelManagementSystem.dao.custom.UserDao;
 import lk.ijse.hostelManagementSystem.entity.User;
 import org.hibernate.Session;
-
 import java.util.List;
 
 public class UserDaoImpl implements UserDao {
